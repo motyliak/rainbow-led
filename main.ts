@@ -22,7 +22,7 @@ input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
             strip.setPixelColor(i, 0x101070)
         }
         strip.show()
-        basic.pause(300)
+        basic.pause(500)
         for (i = 0; i < 4; i++) {
             strip.setPixelColor(i, 0x000000)
         }
@@ -30,7 +30,9 @@ input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
             strip.setPixelColor(i, 0x701010)
         }
         strip.show()
+        basic.pause(500)
     }
+    auto = true
 })
 let auto = true
 let strip : neopixel.Strip = null

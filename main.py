@@ -22,12 +22,14 @@ def on_button_pressed_ab():
         for i in range (4,8):
             strip.set_pixel_color(i, 0x101070)  
         strip.show()
-        basic.pause(300)
+        basic.pause(500)
         for i in range (0,4):
             strip.set_pixel_color(i, 0x000000)
         for i in range (4,8):
             strip.set_pixel_color(i, 0x701010)
         strip.show()
+        basic.pause (500)
+    auto=True
     
 
 
