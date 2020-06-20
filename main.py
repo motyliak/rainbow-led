@@ -11,6 +11,28 @@ def on_button_pressed_b():
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
 
+def on_button_pressed_ab():
+    global auto
+    auto = False
+    strip.clear()
+    strip.show()
+    for zmurk in range (0,4):
+        for i in range (0,4):
+            strip.set_pixel_color(i, 0x701010)
+        for i in range (4,8):
+            strip.set_pixel_color(i, 0x101070)  
+        strip.show()
+        basic.pause(300)
+        for i in range (0,4):
+            strip.set_pixel_color(i, 0x000000)
+        for i in range (4,8):
+            strip.set_pixel_color(i, 0x701010)
+        strip.show()
+    
+
+
+input.on_button_pressed(Button.AB, on_button_pressed_ab)
+
 auto = True
 strip: neopixel.Strip = None
 strip = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
